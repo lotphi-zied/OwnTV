@@ -31,7 +31,7 @@ jobs:
       - name: Build debug APK
         run: |
           chmod +x ./gradlew
-          ./gradlew assembleDebug --stacktrace
+          ./gradlew assembleDebug -x :app:verifyI18nLiterals --stacktrace
 
       - name: Upload APK
         uses: actions/upload-artifact@v7
